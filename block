@@ -1,0 +1,148 @@
+*##div:has(> button > svg):has-text(Log In)
+
+! https://youtube.com
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
+youtube.com##.ytd-video-secondary-info-renderer.style-scope.sticky
+youtube.com###clarify-box
+youtube.com##.ytp-promotooltip-wrapper
+youtube.com##html:style(--ytd-video-primary-info-renderer-title-text-shadow: 1px 1px 1px black, -1px -1px 1px white !important; text-shadow: var(--ytd-video-primary-info-renderer-title-text-shadow, none) !important;)
+youtube.com###masthead-container:not(:hover):style(opacity: 0;)
+youtube.com###primary, #secondary, .ytd-app, .ytd-watch, .player-size, ytm-app:style(margin: 0 !important; padding: 0 !important; bottom: auto !important; flex-basis: auto !important;)
+youtube.com###main.ytd-watch, #top.ytd-watch:style(max-width: none; margin-top: 0 !important;)
+youtube.com###primary-inner > *:not(#player), #secondary-inner, ytm-app, #header-bar:style(position: relative !important; z-index: 1 !important;)
+youtube.com###player, video.html5-main-video, .html5-video-player, .ytp-iv-video-content, #player-control-overlay:style(position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; max-height: 100vh !important; padding: 0 !important)
+youtube.com###player-theater-container:style(height: auto !important; min-height: 0 !important;)
+youtube.com##.ytp-chrome-bottom:style(width: 100% !important; left: auto !important;)
+youtube.com###columns, ytm-app:not(:has(ytm-browse)):style(margin-top: 100vh !important;)
+youtube.com###content-separator:style(display: none;)
+youtube.com##.player-controls-bottom:style(bottom: 10vh !important)
+youtube.com##ytm-item-section-renderer[section-identifier=related-items]:style(padding-top: 100vh !important;)
+youtube.com##ytd-donation-shelf-renderer
+youtube.com###ticket-shelf
+
+! 2021-02-21 https://music.youtube.com
+music.youtube.com##ytmusic-popup-container.ytmusic-app
+
+! 2020-10-05 exacttarget.com
+@@||exacttarget.com/cloud/tools/SSO.aspx?appId=dcb615e6-146e-4887-9e52-fff1f45c2b1e&deepLink=/contentbuilder$subdocument,domain=marketingcloudapps.com
+
+! 2020-11-23 https://www.experts-exchange.com
+www.experts-exchange.com##.exitOverlay.featherlight
+
+! 7/30/2020 https://ontario.foodland.ca
+ontario.foodland.ca##.cookie_ad_chocie
+
+! 7/31/2020 https://www.personalcomputerfixes.com
+www.personalcomputerfixes.com##.bg
+www.personalcomputerfixes.com###quit-modal
+
+! 2020-08-29 https://macapps.ufile.io
+macapps.ufile.io##.modal-active.exitintent.modal-container
+
+! 2020-12-08 https://kubadownload.com
+kubadownload.com##.apps
+
+! 2020-12-14 https://www.techwalla.com
+www.techwalla.com##.jwplayer__container--sticky
+
+! 2021-01-12 https://live.browserstack.com
+live.browserstack.com###platform-list-overlay-react > .overlay
+
+! 2021-01-18 https://www.facebook.com
+facebook.com##[data-pagelet=RightRail] > div:first-child > *:first-child
+facebook.com##[data-pagelet^=FeedUnit]:has-text(/tap to play/i)
+facebook.com##[data-pagelet^=FeedUnit]:has-text(/suggested for you/i)
+facebook.com##[data-pagelet^=FeedUnit]:has(a[href^='/ads'],a[href*='l.facebook.com']:not([aria-label]),a[href^='/instantgames'])
+facebook.com##article:has-text(/tap to play/i)
+facebook.com##article:has-text(/suggested for you/i)
+facebook.com##article:has(a[href^='/ads'],a[href*='l.facebook.com']:not([aria-label]),a[href^='/instantgames'])
+
+! 2021-01-21 https://www.comparemyrates.ca
+www.comparemyrates.ca##.featured_place
+
+! 2021-01-21 https://www.offerhub.ca
+www.offerhub.ca##.featured
+
+! 2021-01-24 https://soap2daymovies.net
+soap2daymovies.net##.premodal-share
+soap2daymovies.net##.modal-backdrop
+
+! 2021-02-07 https://www.reddit.com
+reddit.com##.SignupDrawer
+reddit.com##.CommentsPage>article:has-text(Promoted)
+reddit.com##.CommentsPageTools__login
+
+! 2021-02-23 https://ca.finance.yahoo.com
+ca.finance.yahoo.com##.article-cluster-boundary>li:has-text(Ad)
+
+! 2021-02-15 https://www.coinbase.com
+coinbase.com###android
+
+! 2021-02-15 https://ukuland.com
+ukuland.com##.myDIV
+
+! 2021-02-02 https://www.techjunkie.com
+techjunkie.com##.modal--download.modal
+
+! 2021-02-14 https://www.themarketsdaily.com
+themarketsdaily.com###mb-bar
+
+! 2021-02-22 https://tabs.ultimate-guitar.com
+tabs.ultimate-guitar.com##.js-pinterest-splash-fixed
+tabs.ultimate-guitar.com##.spl-fixed-action
+tabs.ultimate-guitar.com##.js-content
+tabs.ultimate-guitar.com##footer~section:has(video)
+tabs.ultimate-guitar.com##.SiteWideBanner
+tabs.ultimate-guitar.com##article:has(nav:has([href*=".com/pro"]))
+tabs.ultimate-guitar.com##article>section+div>section
+
+! 2021-02-27 https://duckduckgo.com
+duckduckgo.com##.open-in-app
+
+! 2021-02-28 https://www.figma.com
+figma.com##[href],[href] *:style(color: var(--figmaBlue) ! important)
+
+! 2021-03-02 https://www.amazon.ca
+amazon.ca##.afap-above-nav
+
+! 2021-03-06 https://my.wealthsimple.com
+my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#377674"]):style(background-color: #37767422 !important;)
+my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#B82E14"]):style(background-color: #B82E1422 !important;)
+my.wealthsimple.com##[data-qa="wstrade-activity-details"] > div:style(user-select: none)
+my.wealthsimple.com##[data-qa="wstrade-info-item-Limit price"], [data-qa="wstrade-info-item-Submitted quantity"]:style(user-select: all)
+
+! 2021-03-12 https://www.youtube.com
+www.youtube.com##ytd-rich-section-renderer
+
+! 2021-03-18 https://apkfab.com
+apkfab.com##.tip-extension
+
+! 2021-03-27 https://flixmaza.com
+flixmaza.com##div:has(p:has-text(ADBLOCK DETECTED))
+
+! 2021-04-08 https://www.messenger.com
+www.messenger.com##div:has(> div > [href^='https://www.messenger.com/desktop']:not([role=menuitem]))
+
+! 2021-04-09 https://ca.yahoo.com
+ca.yahoo.com##body:style(padding: 0 !important;)
+
+! 2021-05-17 https://flipp.com
+flipp.com##desktop-banner
+
+! 2021-05-24 https://www.facebook.com
+www.facebook.com##div:has(>div>div>div>[aria-label=Install])
+
+! 2021-05-29 https://www.g1.ca
+www.g1.ca##*:has(> .adsTitle)
+
+! 2021-05-31 https://web.whatsapp.com
+web.whatsapp.com##div:has(>video) ~ span + div:first-child
+web.whatsapp.com##div:has(>video) ~ div:has-text(The video can't be played.)
+
+! 2021-07-23 https://ca.finance.yahoo.com
+ca.finance.yahoo.com###masterNav
+ca.finance.yahoo.com###render-target-default > .finance:style(margin-top: 0 !important;)
+ca.finance.yahoo.com##.YDC-Header:not(:hover):style(opacity: .1;)
+ca.finance.yahoo.com###masterNav + .Py\(14px\):style(padding: 0 !important;)
+
