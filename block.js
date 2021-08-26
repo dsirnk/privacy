@@ -5,7 +5,7 @@
 		if (!view) {
 			view = document.createElement('meta')
 			view.setAttribute('name', 'viewport')
-			ocument.getElementsByTagName('head')[0].appendChild(view);
+			document.getElementsByTagName('head')[0].appendChild(view);
 		}
 		view.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 	}
