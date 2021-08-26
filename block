@@ -1,4 +1,4 @@
-*##+js(device-width)
+*##+js(meta)
 *##body:style(overflow: visible !important;)
 
 ! https://youtube.com
