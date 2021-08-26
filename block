@@ -4,26 +4,24 @@
 ! https://youtube.com
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
-youtube.com###dialog
+youtube.com###dialog,#ticket-shelf,#clarify-box,ytd-donation-shelf-renderer,ytd-rich-section-renderer,.ytp-promotooltip-wrapper
 youtube.com##.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
 youtube.com##.ytd-video-secondary-info-renderer.style-scope.sticky
-youtube.com###clarify-box
-youtube.com##.ytp-promotooltip-wrapper
 youtube.com##html:style(--ytd-video-primary-info-renderer-title-text-shadow: 1px 1px 1px black, -1px -1px 1px white !important; text-shadow: var(--ytd-video-primary-info-renderer-title-text-shadow, none) !important;)
 youtube.com###masthead-container:not(:hover):style(opacity: 0;)
+youtube.com###logo-icon:style(padding: 0;)
 youtube.com###primary, #secondary, .ytd-app, .ytd-watch, .player-size, ytm-app:style(margin: 0 !important; padding: 0 !important; bottom: auto !important; flex-basis: auto !important;)
 youtube.com###main.ytd-watch, #top.ytd-watch:style(max-width: none; margin-top: 0 !important;)
 youtube.com###primary-inner > *:not(#player), #secondary-inner, ytm-app, #header-bar:style(position: relative !important; z-index: 1 !important;)
 youtube.com###player, video.html5-main-video, .html5-video-player, .ytp-iv-video-content, #player-control-overlay:style(position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; max-height: 100vh !important; padding: 0 !important)
-youtube.com###player-theater-container:style(height: auto !important; min-height: 0 !important;)
+youtube.com###player-theater-container,#container.ytd-masthead:style(height: auto !important; min-height: 0 !important;)
+youtube.com###header-container:style(margin-top: 18px;)
 youtube.com##.ytp-chrome-bottom:style(width: 100% !important; left: auto !important;)
 youtube.com###columns, ytm-app:not(:has(ytm-browse)):style(margin-top: 100vh !important;)
 youtube.com###content-separator:style(display: none;)
 youtube.com##.player-controls-bottom:style(bottom: 10vh !important)
 youtube.com##ytm-item-section-renderer[section-identifier=related-items]:style(padding-top: 100vh !important;)
-youtube.com##ytd-donation-shelf-renderer
-youtube.com###ticket-shelf
-youtube.com##ytd-rich-section-renderer
+youtube.com##tp-yt-app-toolbar,tp-yt-paper-tabs,#tabs,.tabs-container:style(height: 18px !important;)
 
 ! https://music.youtube.com
 music.youtube.com##ytmusic-popup-container.ytmusic-app
