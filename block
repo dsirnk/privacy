@@ -1,5 +1,5 @@
 *##+js(device-width)
-*##body:style(overflow: visible;)
+*##body:style(overflow-x: visible;)
 
 ! https://youtube.com
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
