@@ -9,4 +9,5 @@
 				Object.assign(document.createElement('meta'), { name: val.name })), val)
 		if (document.querySelector('meta[name=viewport]').content !== val.content) meta()
 	}
+	meta()
 })();
