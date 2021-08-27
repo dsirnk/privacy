@@ -5,8 +5,7 @@
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 youtube.com###dialog,#ticket-shelf,#clarify-box,ytd-donation-shelf-renderer,ytd-rich-section-renderer,.ytp-promotooltip-wrapper
-youtube.com##.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
-youtube.com##.ytd-video-secondary-info-renderer.style-scope.sticky
+youtube.com##.ytd-popup-container.style-scope > .ytd-popup-container.style-scope,.ytd-video-secondary-info-renderer.style-scope.sticky
 youtube.com##html:style(--ytd-video-primary-info-renderer-title-text-shadow: 1px 1px 1px black, -1px -1px 1px white !important; text-shadow: var(--ytd-video-primary-info-renderer-title-text-shadow, none) !important;)
 youtube.com###masthead-container:not(:hover):style(opacity: 0;)
 youtube.com###logo-icon:style(padding: 0;)
