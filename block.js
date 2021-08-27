@@ -9,5 +9,8 @@
 				Object.assign(document.createElement('meta'), { name: val.name })), val)
 		if (document.querySelector('meta[name=viewport]').content !== val.content) meta()
 	}
+	if (document.readyState !== 'complete') self.addEventListener('load', start, { once: true })
+	else if (document.readyState !== 'loading') start()
+	else self.addEventListener('DOMContentLoaded', start, { once: true })
 	meta()
 })();
