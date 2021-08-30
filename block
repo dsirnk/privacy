@@ -1,5 +1,6 @@
 *##+js(meta)
-*##body:style(overflow: visible !important;)
+
+gmail.com##body:style(overflow: visible !important;)
 
 ! https://youtube.com
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
