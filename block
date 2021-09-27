@@ -124,6 +124,7 @@ www.messenger.com##div:has(> div > [href^='https://www.messenger.com/desktop']:n
 
 ! https://flipp.com
 flipp.com##desktop-banner,mobile-banner,mobile-popup-banner,download-app-banner,.feedback-card
+flipp.com##.blocked:style(opacity: 1 !important; overflow: auto !important; height: auto !important;)
 
 ! https://www.g1.ca
 www.g1.ca##*:has(> .adsTitle)
