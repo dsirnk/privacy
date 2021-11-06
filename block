@@ -1,7 +1,7 @@
 *##+js(meta)
 *##.modal-backdrop
 
-play.google.com/log?$xmlhttprequest,domain=google.com
+play.google.com/log$important
 gmail.com##body:style(overflow: visible !important;)
 
 ! https://youtube.com
