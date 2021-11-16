@@ -13,6 +13,8 @@ docs.google.com##.doc *:style(max-width: 100vw !important; height: auto !importa
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 youtube.com###dialog,#ticket-shelf,#clarify-box,ytd-donation-shelf-renderer,ytd-rich-section-renderer,.ytp-promotooltip-wrapper,.ytd-video-secondary-info-renderer.style-scope.sticky
+youtube.com##.ytmusic-nav-bar.center-content:style(display: flex !important)
+youtube.com##.ytmusic-nav-bar.right-content
 
 ! https://music.youtube.com
 music.youtube.com##ytmusic-popup-container.ytmusic-app
