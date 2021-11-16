@@ -4,6 +4,11 @@
 ||play.google.com/log?$important,xmlhttprequest,domain=google.com
 gmail.com##body:style(overflow: visible !important;)
 
+! https://docs.google.com
+docs.google.com##.docs-ml-promotion
+docs.google.com##.doc,.doc > div:style(padding: 0 !important)
+docs.google.com##.doc *:style(max-width: 100vw !important; height: auto !important)
+
 ! https://youtube.com
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
