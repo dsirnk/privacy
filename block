@@ -1,13 +1,149 @@
+
 *##+js(meta)
-*##.modal-backdrop
+*##.modal-backdrop:remove()
 
 ||play.google.com/log?$important,xmlhttprequest,domain=google.com
+||omtrdc.net^$important
+||demdex.net^$important
+||collector.github.com^$important
+
+
+! https://duckduckgo.com
+duckduckgo.com##.open-in-app:remove()
+duckduckgo.com##.badge-link:remove()
+
+! https://gmail.com
 gmail.com##body:style(overflow: visible !important;)
 
+! https://mail.yahoo.com
+mail.yahoo.com##div:has(> div > table span:has-text(Ad)):remove()
+
+! https://reddit.com
+reddit.com###SHORTCUT_FOCUSABLE_DIV > div > div:has-text(Get the app):remove()
+reddit.com##.SignupDrawer:remove()
+reddit.com##.CommentsPage>article:has-text(Promoted)
+reddit.com##.CommentsPageTools__login:remove()
+reddit.com##.XPromoBlockingModal__content:remove()
+reddit.com##.XPromoBlockingModal__overlay:remove()
+reddit.com##.OuterBannerContainer:remove()
+reddit.com##.XPromoPill:remove()
+reddit.com##shreddit-experience-tree:remove()
+reddit.com##body:style(overflow: auto !important)
+reddit.com##.m-blurred:style(filter: none !important)
+reddit.com##.login-button:has-text(Add a Comment)
+
+! https://facebook.com
+facebook.com##[data-pagelet=RightRail] > div:first-child > *:first-child:remove()
+facebook.com##[data-pagelet^=FeedUnit]:has-text(/tap to play/i):remove()
+facebook.com##[data-pagelet^=FeedUnit]:has-text(/suggested for you/i):remove()
+facebook.com##[data-pagelet^=FeedUnit]:has(a[href^='/ads']):remove()
+facebook.com##a[href*='l.facebook.com']:not([aria-label]):remove()
+facebook.com##a[href^='/instantgames']:remove()
+facebook.com##article:has-text(/tap to play/i):remove()
+facebook.com##article:has-text(/suggested for you/i):remove()
+facebook.com##article:has(a[href^='/ads']):remove()
+facebook.com##a[href*='l.facebook.com']:not([aria-label]):remove()
+facebook.com##a[href^='/instantgames']:remove()
+facebook.com##div:has(>div>div>div>[aria-label=Install]):remove()
+m.facebook.com###header-notices:remove()
+
+! https://messenger.com
+messenger.com##div:has(> div > [href*='messenger.com/desktop']:not([role=menuitem])):remove()
+
+! https://web.whatsapp.com
+web.whatsapp.com##div:has(>video) ~ span + div:first-child:remove()
+web.whatsapp.com##div:has(>video) ~ div:has-text(The video can't be played.):remove()
+
+! https://mobile.twitter.com
+mobile.twitter.com##header:remove()
+mobile.twitter.com##section>div>div>:has-text(/^Who to follow$/):remove()
+mobile.twitter.com##section>div>div>:has([role=button]:has-text(/^Follow$/)):remove()
+mobile.twitter.com##section>div>div>:has(a[href^="/i/connect"]):remove()
+
 ! https://docs.google.com
-docs.google.com##.docs-ml-promotion
+docs.google.com##.docs-ml-promotion:remove()
 docs.google.com##.doc,.doc > div:style(padding: 0 !important)
 docs.google.com##.doc *:style(max-width: 100vw !important; height: auto !important)
+
+! https://figma.com
+figma.com##[href],[href] *:style(color: var(--figmaBlue) ! important)
+
+! https://support.veeva.com
+support.veeva.com###vue-guide:remove()
+
+! https://app.slack.com
+app.slack.com##[role=listitem]:has-text(@Oliv here):remove()
+app.slack.com##[role=listitem]:has-text(You mentioned @Oliv):remove()
+
+! https://flipp.com
+flipp.com##desktop-banner:remove()
+flipp.com##mobile-banner:remove()
+flipp.com##mobile-popup-banner:remove()
+flipp.com##download-app-banner:remove()
+flipp.com##.feedback-card:remove()
+flipp.com##.blocked:style(opacity: 1 !important; overflow: auto !important; height: auto !important;)
+
+! https://gasbuddy.com
+gasbuddy.com##[class*=MobileDownloadAd]:remove()
+gasbuddy.com##[href^="/pay"]:remove()
+gasbuddy.com###gb-promo-pay-and-app:remove()
+gasbuddy.com##.image-cta:remove()
+gasbuddy.com##.bottom-buffer-md:remove()
+
+! https://realtor.ca
+realtor.ca###TOUMessageCtrl:remove()
+
+! https://housesigma.com
+housesigma.com##app-notifications:remove()
+housesigma.com##.show:has-text(HouseSigma App):remove()
+
+! https://glassdoor.ca
+glassdoor.ca###SmarterBannerSpacer:remove()
+glassdoor.ca###SmarterBannerContainer:remove()
+
+! https://temp-mail.org
+temp-mail.org##.smartbnr-android.smartbanner:remove()
+
+
+! https://finance.yahoo.com
+ca.yahoo.com##body:style(padding: 0 !important;)
+finance.yahoo.com##li:has(> a[href^="https://beap.gemini.yahoo.com/"]):remove()
+finance.yahoo.com##[id*=FeatureBar]:remove()
+finance.yahoo.com###masterNav:remove()
+finance.yahoo.com###render-target-default > .finance:style(margin-top: 0 !important;)
+finance.yahoo.com##.YDC-Header:not(:hover):style(opacity: .1;)
+finance.yahoo.com###masterNav + .Py\(14px\):style(padding: 0 !important;)
+finance.yahoo.com##.article-cluster-boundary>li:has-text(Ad):remove()
+
+! https://my.wealthsimple.com
+my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#377674"]):style(background-color: #37767422 !important;)
+my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#B82E14"]):style(background-color: #B82E1422 !important;)
+my.wealthsimple.com##[data-qa="wstrade-activity-details"] > div:style(user-select: none)
+my.wealthsimple.com##[data-qa="wstrade-info-item-Limit price"], [data-qa="wstrade-info-item-Submitted quantity"]:style(user-select: all)
+
+! https://themarketsdaily.com
+themarketsdaily.com###mb-bar:remove()
+
+! https://fool.com
+fool.com###promoPopup:remove()
+
+! https://marketwatch.com
+marketwatch.com###cx-candybar:remove()
+marketwatch.com##.is-paywall, .is-paywall .page:style(overflow:auto!important)
+
+! https://comparemyrates.ca
+comparemyrates.ca##.featured_place:remove()
+
+! https://remitly.com
+remitly.com##.fljy6dp.rm-container > div.justify-content-center.rm-row:not(:nth-child(2))
+
+! https://paypal.com
+paypal.com##div:has(>.ppvx_elevation--level1):remove()
+paypal.com##.PP__MobileBanner__Banner_Container:remove()
+
+! https://coinbase.com
+coinbase.com###android:remove()
+
 
 ! https://youtube.com
 youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
@@ -17,165 +153,137 @@ youtube.com##.ytmusic-nav-bar.center-content:style(display: flex !important)
 youtube.com##.ytmusic-nav-bar.right-content
 
 ! https://music.youtube.com
-music.youtube.com##ytmusic-popup-container.ytmusic-app
+music.youtube.com##ytmusic-popup-container.ytmusic-app:remove()
 
-! exacttarget.com
-@@||exacttarget.com/cloud/tools/SSO.aspx?appId=dcb615e6-146e-4887-9e52-fff1f45c2b1e&deepLink=/contentbuilder$subdocument,domain=marketingcloudapps.com
+! https://gaana.com
+gaana.com##.dwApp_nudge:remove()
 
-! https://www.experts-exchange.com
-www.experts-exchange.com##.exitOverlay.featherlight
+! https://wrytin.com
+wrytin.com##.modal:remove()
 
-! https://ontario.foodland.ca
-ontario.foodland.ca##.cookie_ad_chocie
+! https://chordify.net
+chordify.net###content > * > div *:has-text(Advertisement):remove()
+chordify.net###aside div *:has-text(Advertisement):remove()
 
-! https://www.personalcomputerfixes.com
-www.personalcomputerfixes.com##.bg
-www.personalcomputerfixes.com###quit-modal
+! https://guitartabs.cc
+guitartabs.cc##.sidebar:remove()
 
-! https://macapps.ufile.io
-macapps.ufile.io##.modal-active.exitintent.modal-container
-
-! https://kubadownload.com
-kubadownload.com##.apps
-
-! https://www.techwalla.com
-www.techwalla.com##.jwplayer__container--sticky
-
-! https://live.browserstack.com
-live.browserstack.com###platform-list-overlay-react > .overlay
-
-! https://www.facebook.com
-facebook.com##[data-pagelet=RightRail] > div:first-child > *:first-child
-facebook.com##[data-pagelet^=FeedUnit]:has-text(/tap to play/i)
-facebook.com##[data-pagelet^=FeedUnit]:has-text(/suggested for you/i)
-facebook.com##[data-pagelet^=FeedUnit]:has(a[href^='/ads'],a[href*='l.facebook.com']:not([aria-label]),a[href^='/instantgames'])
-facebook.com##article:has-text(/tap to play/i)
-facebook.com##article:has-text(/suggested for you/i)
-facebook.com##article:has(a[href^='/ads'],a[href*='l.facebook.com']:not([aria-label]),a[href^='/instantgames'])
-facebook.com##div:has(>div>div>div>[aria-label=Install])
-m.facebook.com###header-notices
-
-! https://www.comparemyrates.ca
-www.comparemyrates.ca##.featured_place
-
-! https://www.offerhub.ca
-www.offerhub.ca##.featured
-
-! https://soap2daymovies.net
-soap2daymovies.net##.premodal-share
-soap2daymovies.net##.modal-backdrop
-
-! https://www.reddit.com
-reddit.com##.SignupDrawer
-reddit.com##.CommentsPage>article:has-text(Promoted)
-reddit.com##.CommentsPageTools__login
-reddit.com##.XPromoBlockingModal__content
-reddit.com##.XPromoBlockingModal__overlay
-reddit.com##.OuterBannerContainer
-reddit.com##.XPromoPill
-reddit.com##shreddit-experience-tree
-reddit.com##body:style(overflow: auto !important)
-reddit.com##.m-blurred:style(filter: none !important)
-reddit.com##.login-button:has-text(Add a Comment)
-
-! https://www.coinbase.com
-coinbase.com###android
-
-! https://ukuland.com
-ukuland.com##.myDIV
-
-! https://www.techjunkie.com
-techjunkie.com##.modal--download.modal
-
-! https://www.themarketsdaily.com
-themarketsdaily.com###mb-bar
+! https://guitartabsexplorer.com
+guitartabsexplorer.com##linkfire-widget:remove()
 
 ! https://tabs.ultimate-guitar.com
-tabs.ultimate-guitar.com##.js-pinterest-splash-fixed
-tabs.ultimate-guitar.com##.spl-fixed-action
-tabs.ultimate-guitar.com##.js-content
-tabs.ultimate-guitar.com##footer~section:has(video)
-tabs.ultimate-guitar.com##.SiteWideBanner
-tabs.ultimate-guitar.com##article:has(nav:has([href*=".com/pro"]))
-tabs.ultimate-guitar.com##article>section+div>section
+||ultimate-guitar.com/shots/*$xhr,important
+||tabs.ultimate-guitar.com/static/public/video/*$media,important
+||tabs.ultimate-guitar.com/static/public/build/prebid_6_19_0/*$script,important
+||tabs.ultimate-guitar.com/player_event$image,important
 
-! https://duckduckgo.com
-duckduckgo.com##.open-in-app
+! https://tabs.ultimate-guitar.com
+ultimate-guitar.com##.spl-big:remove()
+ultimate-guitar.com##bidding-wrapper:remove()
+ultimate-guitar.com##.js-small-splash-wrapper:remove()
+ultimate-guitar.com##.ugm-controls--wrapper:remove()
+ultimate-guitar.com##.ugm-tablet-flex > section:not(:last-child):remove()
+ultimate-guitar.com##.ugm-footer:remove()
+ultimate-guitar.com##section>*>*>div:has-text(Official):remove()
+ultimate-guitar.com##section>*>*>div:has-text(Pro):remove()
+ultimate-guitar.com##.js-pinterest-splash-fixed:remove()
+ultimate-guitar.com##.spl-fixed-action:remove()
+ultimate-guitar.com##.js-content:remove()
+ultimate-guitar.com##footer~section:has(video):remove()
+ultimate-guitar.com##.SiteWideBanner:remove()
+ultimate-guitar.com##article:has(nav:has([href*=".com/pro"])):remove()
+ultimate-guitar.com##article>section+div>section:remove()
+#tabs.ultimate-guitar.com##.ugm-tablet-flex > section:style(width:100vw !important)
 
-! https://www.figma.com
-figma.com##[href],[href] *:style(color: var(--figmaBlue) ! important)
+! https://songsterr.com
+songsterr.com##[id*=promo]:remove()
+songsterr.com##[id*=plus]:remove()
+songsterr.com##[id*=showroom]:remove()
+songsterr.com##[class*=showroom]:remove()
+songsterr.com##.Panel-inner > *:has([href*="/plus"]):remove()
+songsterr.com###showroom_header:remove()
+songsterr.com###showroom_bottom:remove()
+songsterr.com###app>div:nth-of-type(2)>:last-child>:last-child
+songsterr.com##[id^='Redesign_ATF']:remove()
 
-! https://www.amazon.ca
-amazon.ca##.afap-above-nav
+! https://m.e-chords.com
+m.e-chords.com##.adscifra:remove()
+m.e-chords.com##[href^="https://m.e-chords.com/signup-free.htm"]:remove()
 
-! https://ca.finance.yahoo.com
-ca.yahoo.com##body:style(padding: 0 !important;)
-ca.finance.yahoo.com###masterNav
-ca.finance.yahoo.com###render-target-default > .finance:style(margin-top: 0 !important;)
-ca.finance.yahoo.com##.YDC-Header:not(:hover):style(opacity: .1;)
-ca.finance.yahoo.com###masterNav + .Py\(14px\):style(padding: 0 !important;)
-ca.finance.yahoo.com##.article-cluster-boundary>li:has-text(Ad)
+! https://ukuland.com
+ukuland.com##.myDIV:remove()
+ukuland.com##div:has(>iframe[src*=funding]):remove()
 
-! https://my.wealthsimple.com
-my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#377674"]):style(background-color: #37767422 !important;)
-my.wealthsimple.com##[data-qa="wstrade-position-list"]>button:has([fill="#B82E14"]):style(background-color: #B82E1422 !important;)
-my.wealthsimple.com##[data-qa="wstrade-activity-details"] > div:style(user-select: none)
-my.wealthsimple.com##[data-qa="wstrade-info-item-Limit price"], [data-qa="wstrade-info-item-Submitted quantity"]:style(user-select: all)
+! https://songtive.com
+songtive.com##.ads:remove()
 
-! https://apkfab.com
-apkfab.com##.tip-extension
-
-! https://flixmaza.com
-flixmaza.com##div:has(p:has-text(ADBLOCK DETECTED))
-
-! https://www.messenger.com
-www.messenger.com##div:has(> div > [href^='https://www.messenger.com/desktop']:not([role=menuitem]))
-
-! https://flipp.com
-flipp.com##desktop-banner,mobile-banner,mobile-popup-banner,download-app-banner,.feedback-card
-flipp.com##.blocked:style(opacity: 1 !important; overflow: auto !important; height: auto !important;)
-
-! https://www.g1.ca
-www.g1.ca##*:has(> .adsTitle)
-
-! https://web.whatsapp.com
-web.whatsapp.com##div:has(>video) ~ span + div:first-child
-web.whatsapp.com##div:has(>video) ~ div:has-text(The video can't be played.)
 
 ! https://gfycat.com
-gfycat.com##.pro-cta
-gfycat.com##div.button-block > .outlined-button
+gfycat.com##.pro-cta:remove()
+gfycat.com##div.button-block > .outlined-button:remove()
 
-! https://www.gasbuddy.com
-www.gasbuddy.com##[class*=MobileDownloadAd]
-www.gasbuddy.com##[href^="/pay"]
-www.gasbuddy.com###gb-promo-pay-and-app
-www.gasbuddy.com##.image-cta
-www.gasbuddy.com##.bottom-buffer-md
+! https://g1.ca
+g1.ca##*:has(> .adsTitle):remove()
 
-! https://www.thehindu.com
-www.thehindu.com##.tp-modal
-www.thehindu.com##.tp-backdrop
+! https://thehindu.com
+thehindu.com##.tp-modal:remove()
+thehindu.com##.tp-backdrop:remove()
 
-! https://www.cbsnews.com
-www.cbsnews.com##.smart-banner-download
+! https://cbsnews.com
+cbsnews.com##.smart-banner-download:remove()
 
-! https://mobile.twitter.com
-mobile.twitter.com##header
-mobile.twitter.com##section>div>div>:has-text(/^Who to follow$/)
-mobile.twitter.com##section>div>div>:has([role=button]:has-text(/^Follow$/))
-mobile.twitter.com##section>div>div>:has(a[href^="/i/connect"])
+! https://amazon.ca
+amazon.ca##.afap-above-nav:remove()
 
-! https://housesigma.com
-housesigma.com##app-notifications
-housesigma.com##.show:has-text(HouseSigma App)
+! https://geoapify.com
+geoapify.com##.geoapify-cookie-consent:remove()
 
-! https://www.glassdoor.ca
-www.glassdoor.ca###SmarterBannerSpacer
-www.glassdoor.ca###SmarterBannerContainer
+! https://spotangels.com
+spotangels.com##.backdrop:remove()
+spotangels.com##.share-modal:remove()
 
-! https://temp-mail.org
-temp-mail.org##.smartbnr-android.smartbanner
+! https://freewp.io
+freewp.io##[class*=blackout]:remove()
+freewp.io##div:has([class*=modal]):remove()
 
-! https://www.realtor.ca
-www.realtor.ca###TOUMessageCtrl
+! https://mybusinesshub.rogers.com
+mybusinesshub.rogers.com###session-timeout-modal:remove()
+mybusinesshub.rogers.com##.stop-scroll:style(overflow: auto !important)
+
+! https://experts-exchange.com
+experts-exchange.com##.exitOverlay.featherlight:remove()
+
+! https://ontario.foodland.ca
+ontario.foodland.ca##.cookie_ad_chocie:remove()
+
+! https://personalcomputerfixes.com
+personalcomputerfixes.com##.bg:remove()
+personalcomputerfixes.com###quit-modal:remove()
+
+! https://macapps.ufile.io
+macapps.ufile.io##.modal-active.exitintent.modal-container:remove()
+
+! https://kubadownload.com
+kubadownload.com##.apps:remove()
+
+! https://techwalla.com
+techwalla.com##.jwplayer__container--sticky:remove()
+
+! https://live.browserstack.com
+live.browserstack.com###platform-list-overlay-react > .overlay:remove()
+
+! https://offerhub.ca
+offerhub.ca##.featured:remove()
+
+! https://soap2daymovies.net
+soap2daymovies.net##.premodal-share:remove()
+soap2daymovies.net##.modal-backdrop:remove()
+
+! https://techjunkie.com
+techjunkie.com##.modal--download.modal:remove()
+
+! https://apkfab.com
+apkfab.com##.tip-extension:remove()
+
+! https://flixmaza.com
+flixmaza.com##div:has(p:has-text(ADBLOCK DETECTED)):remove()
