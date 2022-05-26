@@ -200,6 +200,7 @@ ultimate-guitar.com##main ~ *:remove()
 ultimate-guitar.com##main > :first-child > *:not(:has-text(Versions)):remove()
 ultimate-guitar.com##footer ~ div:remove()
 ultimate-guitar.com##p + nav:remove()
+ultimate-guitar.com##.js-page > div > div + div:remove()
 #tabs.ultimate-guitar.com##.ugm-tablet-flex > section:style(width:100vw !important)
 
 ! https://songsterr.com
