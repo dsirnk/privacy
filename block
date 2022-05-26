@@ -193,6 +193,13 @@ ultimate-guitar.com##footer~section:has(video):remove()
 ultimate-guitar.com##.SiteWideBanner:remove()
 ultimate-guitar.com##article:has(nav:has([href*=".com/pro"])):remove()
 ultimate-guitar.com##article>section+div>section:remove()
+ultimate-guitar.com##body iframe:remove()
+ultimate-guitar.com##body > div:last-child:remove()
+ultimate-guitar.com##section:has-text(SHOTS):remove()
+ultimate-guitar.com##main ~ *:remove()
+ultimate-guitar.com##main > :first-child > *:not(:has-text(Versions)):remove()
+ultimate-guitar.com##footer ~ div:remove()
+ultimate-guitar.com##p + nav:remove()
 #tabs.ultimate-guitar.com##.ugm-tablet-flex > section:style(width:100vw !important)
 
 ! https://songsterr.com
