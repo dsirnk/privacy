@@ -205,6 +205,10 @@ ultimate-guitar.com##main form:remove()
 ultimate-guitar.com##footer:has-text(Suggest correction):remove()
 ultimate-guitar.com##section:has-text(Download Pdf) > *:remove()
 ultimate-guitar.com##article > section:first-child > section:first-child button:remove()
+ultimate-guitar.com##aside:remove()
+ultimate-guitar.com##main:style(flex-flow:column-reverse)
+ultimate-guitar.com##main>*:style(width:auto!important)
+ultimate-guitar.com##.wgutd:style(min-width:0!important)
 #tabs.ultimate-guitar.com##.ugm-tablet-flex > section:style(width:100vw !important)
 
 ! https://songsterr.com
