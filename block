@@ -4,7 +4,7 @@
 
 @@||localhost^
 
-||google.com/log?$important
+||google.com/log^$important
 ||youtube.com/api/stats/watchtime^$important
 ||omtrdc.net^$important
 ||demdex.net^$important
