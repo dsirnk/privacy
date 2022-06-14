@@ -5,6 +5,7 @@
 @@||localhost^
 
 ||google.com/log^$important
+||play.google.com/log^$important
 ||youtube.com/api/stats/watchtime^$important
 ||omtrdc.net^$important
 ||demdex.net^$important
