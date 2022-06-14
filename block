@@ -2,11 +2,13 @@
 *##+js(meta)
 *##.modal-backdrop:remove()
 
-||play.google.com/log?$important,xmlhttprequest,domain=google.com
+@@||localhost^
+
+||google.com/log?$important
+||youtube.com/api/stats/watchtime^$important
 ||omtrdc.net^$important
 ||demdex.net^$important
 ||collector.github.com^$important
-
 
 ! https://duckduckgo.com
 duckduckgo.com##.open-in-app:remove()
@@ -250,6 +252,10 @@ cbsnews.com##.smart-banner-download:remove()
 
 ! https://amazon.ca
 amazon.ca##.afap-above-nav:remove()
+
+! https://codepen.io
+codepen.io##.referer-warning:remove()
+cdpn.io##.referer-warning:remove()
 
 ! https://geoapify.com
 geoapify.com##.geoapify-cookie-consent:remove()
