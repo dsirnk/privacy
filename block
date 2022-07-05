@@ -35,6 +35,14 @@ reddit.com##body:style(overflow: auto !important)
 reddit.com##.m-blurred:style(filter: none !important)
 reddit.com##.login-button:has-text(Add a Comment)
 
+! https://www.4chan.org
+www.4chan.org###abc-cnt
+
+! https://boards.4channel.org
+boards.4channel.org##.adc-ld.adc-resp
+boards.4channel.org##.adc-resp-bg
+boards.4channel.org##.center.middlead
+
 ! https://facebook.com
 facebook.com##[data-pagelet=RightRail] > div:first-child > *:first-child:remove()
 facebook.com##[data-pagelet^=FeedUnit]:has-text(/tap to play/i):remove()
@@ -58,6 +66,7 @@ web.whatsapp.com##div:has(>video) ~ span + div:first-child:remove()
 web.whatsapp.com##div:has(>video) ~ div:has-text(The video can't be played.):remove()
 
 ! https://mobile.twitter.com
+twitter.com###layers:remove()
 mobile.twitter.com##header:remove()
 mobile.twitter.com##section>div>div>:has-text(/^Who to follow$/):remove()
 mobile.twitter.com##section>div>div>:has([role=button]:has-text(/^Follow$/)):remove()
@@ -85,6 +94,8 @@ flipp.com##mobile-popup-banner:remove()
 flipp.com##download-app-banner:remove()
 flipp.com##.feedback-card:remove()
 flipp.com##.blocked:style(opacity: 1 !important; overflow: auto !important; height: auto !important;)
+flipp.com##[class^=mobileBanner]:remove()
+flipp.com##[class^=home_downloadApp]:remove()
 
 ! https://gasbuddy.com
 gasbuddy.com##[class*=MobileDownloadAd]:remove()
@@ -99,6 +110,7 @@ realtor.ca###TOUMessageCtrl:remove()
 ! https://housesigma.com
 housesigma.com##app-notifications:remove()
 housesigma.com##.show:has-text(HouseSigma App):remove()
+housesigma.com##.banner-top:remove()
 
 ! https://glassdoor.ca
 glassdoor.ca###SmarterBannerSpacer:remove()
