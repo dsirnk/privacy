@@ -96,6 +96,7 @@ flipp.com##.feedback-card:remove()
 flipp.com##.blocked:style(opacity: 1 !important; overflow: auto !important; height: auto !important;)
 flipp.com##[class^=mobileBanner]:remove()
 flipp.com##[class^=home_downloadApp]:remove()
+flipp.com##div:has(> .get-app-wrapper)
 
 ! https://gasbuddy.com
 gasbuddy.com##[class*=MobileDownloadAd]:remove()
