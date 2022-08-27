@@ -2068,5 +2068,6 @@ if(!window.console||firebug.env.override){
 }
 
 firebug.lib.util.Init.push(firebug.init);
+console.log('firebug', firebug)
 firebug.init();
 })();
