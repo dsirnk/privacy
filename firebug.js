@@ -1,6 +1,6 @@
 /// firebug.js
 (function () {
-var firebug = {
+document.body.appendChild(Object.assign(document.createElement('script'), { type: 'text/javascript' })).innerHTML = `var firebug = {
     version:[1.23,20090122],
     el:{}, 
     env:{ 
@@ -2069,5 +2069,5 @@ if(!window.console||firebug.env.override){
 
 firebug.lib.util.Init.push(firebug.init);
 console.log('firebug', firebug)
-firebug.init();
+firebug.init();`
 })();
