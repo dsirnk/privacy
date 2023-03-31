@@ -1,6 +1,11 @@
 
 *##+js(meta)
 *##.modal-backdrop:remove()
+*##.sponsor:remove()
+*##body > .pure-g > #contents:style(width:100%!important)
+*##body > .pure-g > #contents #player-container:style(margin:0!important)
+*###contents > .h-box:has(> h3):remove()
+*###contents > .h-box > img:style(width:auto!important)
 
 @@||localhost^
 
@@ -323,3 +328,82 @@ apkfab.com##.tip-extension:remove()
 
 ! https://flixmaza.com
 flixmaza.com##div:has(p:has-text(ADBLOCK DETECTED)):remove()
+
+! https://wedevs.com
+wedevs.com##.sales__report
+
+! https://en.vidmo.pro
+vidmo.pro##iframe:remove()
+vidmo.pro##div:has(> img[height="10"]):remove()
+vidmo.pro##div:has(> img[style*="height: 10px"]):remove()
+vidmo.pro##div:has(> img[style*="height:10px"]):remove()
+
+! https://savelinks.me
+savelinks.me###adbox
+
+! http://bestdesiporn.pro
+bestdesiporn.pro###closediv
+
+! https://www.glassdoor.com
+www.glassdoor.com##.mt-md-0.mt.justify-content-end.align-items-center.d-flex.col-md-auto.col-12
+
+! https://web.whatsapp.com
+web.whatsapp.com##.app-wrapper-web>*:style(top:0!important;height:100%!important;width:100%!important)
+
+! https://apple.stackexchange.com
+superuser.com,stackoverflow.com,stackexchange.com,askubuntu.com,serverfault.com##body:style(margin:0!important)
+superuser.com,stackoverflow.com,stackexchange.com,askubuntu.com,serverfault.com##body>header:style(margin:0!important)
+superuser.com,stackoverflow.com,stackexchange.com,askubuntu.com,serverfault.com###noscript-warning:remove()
+superuser.com,stackoverflow.com,stackexchange.com,askubuntu.com,serverfault.com##.js-announcement-banner:remove()
+||ajax.googleapis.com^$domain=superuser.com,important
+||www.gravatar.com^$domain=superuser.com,important
+||ajax.googleapis.com^$domain=stackoverflow.com,important
+||www.gravatar.com^$domain=stackoverflow.com,important
+||ajax.googleapis.com^$domain=stackexchange.com,important
+||www.gravatar.com^$domain=stackexchange.com,important
+||ajax.googleapis.com^$domain=askubuntu.com,important
+||www.gravatar.com^$domain=askubuntu.com,important
+||ajax.googleapis.com^$domain=serverfault.com,important
+||www.gravatar.com^$domain=serverfault.com,important
+
+! https://svelte.dev
+svelte.dev##.ukr:remove()
+
+! https://support.mozilla.org
+support.mozilla.org###id_scam_alert:remove()
+support.mozilla.org##.page-heading--logo:remove()
+
+! https://support.mozilla.org
+support.mozilla.org##.notice:style(margin:0!important;padding:0!important;min-height:0!important)
+
+! https://flyflair.com
+flyflair.com##.banner
+
+! https://www.sitepoint.com
+sitepoint.com##.sbBody:remove()
+
+! https://lightrun.com
+lightrun.com##[class^=Hero]:remove()
+
+! https://community.frontity.org
+community.frontity.org###banner:remove()
+
+! https://www.youtube.com
+youtube.com##ytd-feed-nudge-renderer:remove()
+youtube.com##ytd-metadata-row-container-renderer:remove()
+youtube.com##[slot=extra-content]:remove()
+youtube.com##.ytp-suggested-action:remove()
+
+! https://css-tricks.com
+css-tricks.com##.sidebar:remove()
+css-tricks.com##.articles-and-sidebar:style(display:block!important)
+
+! https://web.whatsapp.com
+web.whatsapp.com##[role=textbox]:style(max-height: 50vh!important)
+
+
+! https://flightaware.com
+flightaware.com##.flightPagePremiumUpsell:remove()
+
+! https://www.bing.com
+www.bing.com##.slide-in:has([title=Ad])
