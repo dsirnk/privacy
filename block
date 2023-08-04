@@ -89,8 +89,8 @@ figma.com##[href],[href] *:style(color: var(--figmaBlue) ! important)
 support.veeva.com###vue-guide:remove()
 
 ! https://app.slack.com
-app.slack.com##[role=listitem]:has-text(@Oliv here):remove()
-app.slack.com##[role=listitem]:has-text(You mentioned @Oliv):remove()
+app.slack.com##[role=listitem]:has-text(@Oliv here)
+app.slack.com##[role=listitem]:has-text(You mentioned @Oliv)
 
 ! https://flipp.com
 flipp.com##desktop-banner:remove()
