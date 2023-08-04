@@ -3,32 +3,19 @@
 	list, XY, X = 0, Y = 0, at = location.origin,
 	to = Object.values(list).find(e => e.clearnet.includes(at))?.clearnet
 ) {
-	const meta = () => console.log('meta', Object.assign(
-		document.querySelector('meta[name=viewport]') ||
-		document.getElementsByTagName('head')[0].appendChild(document.createElement('meta')),
-		{
-			name: 'viewport',
-			content: `width=${
-				Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-			}, initial-scale=1.0, maximum-scale=1.0, user-scalable=0`
-		}
-	))
-	self.addEventListener('load', meta)
-	self.addEventListener('resize', meta)
-	self.addEventListener('DOMContentLoaded', meta)
-	meta()
 	if (!to) return
-	const H = document.body.appendChild(document.createElement('h1'))
-	H.style = 'position:fixed;bottom:0;right:0;font-size:3em;'
-	H.innerHTML = '<b>&lt;</b>&nbsp;&nbsp;&nbsp;<b>&gt;</b>'
-	H.onclick = e => location.replace(location.href.replace(at, e.innerText = '<'
-		? to[(to.indexOf(at) || to.length) - 1] : to[to.indexOf(at) + 1] || to[0]
-	))
-	const on = (e, fn, off, el = document) =>
-		e.split(' ').map(e => el[`${off ? 'remove' : 'add'}EventListener`](e, fn))
+	const d = document, A = d.getElementById('>') ||
+		d.body.appendChild(Object.assign(d.createElement('a')), {
+			id: '>',
+			textContent: '>',
+			style: 'position:fixed;bottom:0;right:0;padding:2em',
+			href: e => location.href.replace(at, to[to.indexOf(at) + 1] || to[0])
+		})
 	const move = e => e.preventDefault() || e.stopPropagation() ||
-		(H.style.bottom = `${Y = XY[1] - (e.touches?.[0] ?? e).clientY}px`)
-		&& (H.style.right = `${X = XY[0] - (e.touches?.[0] ?? e).clientX}px`)
+		(A.style.bottom = `${Y = XY[1] - (e.touches?.[0] ?? e).clientY}px`)
+		&& (A.style.right = `${X = XY[0] - (e.touches?.[0] ?? e).clientX}px`)
+	const on = (e, fn, off, el = d) =>
+		e.split(' ').map(e => el[`${off ? 'remove' : 'add'}EventListener`](e, fn))
 	on('touchstart mousedown', e => (
 		XY = [(e.touches?.[0] ?? e).clientX + X, (e.touches?.[0] ?? e).clientY + Y]
 	) && on('touchmove mousemove', move), 0, H)
