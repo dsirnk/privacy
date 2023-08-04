@@ -19,20 +19,20 @@
 	meta()
 	if (!to) return
 	const H = document.body.appendChild(document.createElement('h1'))
-	H.style = 'position:fixed;bottom:1em;right:1em;font-size:5em;'
+	H.style = 'position:fixed;bottom:0;right:0;font-size:3em;'
 	H.innerHTML = '<b>&lt;</b>&nbsp;&nbsp;&nbsp;<b>&gt;</b>'
 	H.onclick = e => location.replace(location.href.replace(at, e.innerText = '<'
 		? to[(to.indexOf(at) || to.length) - 1] : to[to.indexOf(at) + 1] || to[0]
 	))
 	const on = (e, fn, off, el = document) =>
 		e.split(' ').map(e => el[`${off ? 'remove' : 'add'}EventListener`](e, fn))
-	const end = e => XY = !(on('touchmove mousemove', move, 1) && on('touchend mouseup', end, 1))
-	const move = e => XY
-		&& (H.style.bottom = `max(0px, ${Y = XY[1] - e.clientY}px)`)
-		&& (H.style.right = `max(0px, ${X = XY[0] - e.clientX}px)`)
-	on('touchstart mousedown', e => (XY = [e.clientX + X, e.clientY + Y])
-		&& on('touchmove mousemove', move)
-		&& on('touchend mouseup', end), false, H)
+	const move = e => e.preventDefault() || e.stopPropagation() ||
+		(H.style.bottom = `${Y = XY[1] - (e.touches?.[0] ?? e).clientY}px`)
+		&& (H.style.right = `${X = XY[0] - (e.touches?.[0] ?? e).clientX}px`)
+	on('touchstart mousedown', e => (
+		XY = [(e.touches?.[0] ?? e).clientX + X, (e.touches?.[0] ?? e).clientY + Y]
+	) && on('touchmove mousemove', move), 0, H)
+	on('touchend mouseup', e => on('touchmove mousemove', move, 1))
 })({
 	"invidious": {
 		"clearnet": [
