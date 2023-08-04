@@ -62,7 +62,9 @@ facebook.com##article:has(a[href^='/ads']):remove()
 facebook.com##a[href*='l.facebook.com']:not([aria-label]):remove()
 facebook.com##a[href^='/instantgames']:remove()
 facebook.com##div:has(>div>div>div>[aria-label=Install]):remove()
+m.facebook.com##.fixed-container.bottom:has-text(the app):remove()
 m.facebook.com###header-notices:remove()
+m.facebook.com###screen-root>div>:first-child>div:has-text(Suggested for you):remove()
 
 ! https://messenger.com
 messenger.com##div:has(> div > [href*='messenger.com/desktop']:not([role=menuitem])):remove()
