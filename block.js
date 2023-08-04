@@ -5,12 +5,12 @@
 ) {
 	if (!to) return
 	const d = document, A = d.getElementById('>') ||
-		d.body.appendChild(Object.assign(d.createElement('a')), {
+		d.body.appendChild(Object.assign(d.createElement('a'), {
 			id: '>',
-			textContent: '>',
-			style: 'position:fixed;bottom:0;right:0;padding:2em',
-			href: e => location.href.replace(at, to[to.indexOf(at) + 1] || to[0])
-		})
+			innerText: '>',
+			style: 'position:fixed;bottom:0;right:0;padding:1em;font-size:3em',
+			href: location.href.replace(at, to[to.indexOf(at) + 1] || to[0])
+		}))
 	const move = e => e.preventDefault() || e.stopPropagation() ||
 		(A.style.bottom = `${Y = XY[1] - (e.touches?.[0] ?? e).clientY}px`)
 		&& (A.style.right = `${X = XY[0] - (e.touches?.[0] ?? e).clientX}px`)
@@ -18,7 +18,7 @@
 		e.split(' ').map(e => el[`${off ? 'remove' : 'add'}EventListener`](e, fn))
 	on('touchstart mousedown', e => (
 		XY = [(e.touches?.[0] ?? e).clientX + X, (e.touches?.[0] ?? e).clientY + Y]
-	) && on('touchmove mousemove', move), 0, H)
+	) && on('touchmove mousemove', move), 0, A)
 	on('touchend mouseup', e => on('touchmove mousemove', move, 1))
 })({
 	"invidious": {
