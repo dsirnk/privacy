@@ -1,5 +1,4 @@
 
-*##+js(meta)
 *##.modal-backdrop:remove()
 *##.sponsor:remove()
 *##body > .pure-g > #contents:style(width:100%!important)
@@ -91,6 +90,7 @@ figma.com##[href],[href] *:style(color: var(--figmaBlue) ! important)
 support.veeva.com###vue-guide:remove()
 
 ! https://app.slack.com
+slack.com##+js(meta)
 app.slack.com##[role=listitem]:has-text(@Oliv here)
 app.slack.com##[role=listitem]:has-text(You mentioned @Oliv)
 
