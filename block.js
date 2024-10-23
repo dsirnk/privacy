@@ -6,7 +6,7 @@
 		{
 			name: 'viewport',
 			content: `width=${
-				320 || Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+				640 || Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 			}, initial-scale=1.0, maximum-scale=1.0, user-scalable=0`
 		}
 	))
@@ -14,5 +14,4 @@
 	self.addEventListener('resize', meta)
 	self.addEventListener('DOMContentLoaded', meta)
 	meta()
-	alert('meta')
 })();
